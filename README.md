@@ -25,7 +25,7 @@ Run only on devices you own or are authorized to assess. Reports may include loc
 See [roadmap](docs/ROADMAP.md) and [security policy](SECURITY.md).
 
 ## Licensing
-A public license has not yet been selected; public visibility alone does not grant redistribution rights. Do not assume the code is open-source licensed until a license is added.
+The Community edition includes an [Apache License 2.0](LICENSE). Contributions are welcome under the [contribution guidelines](CONTRIBUTING.md), subject to maintainer review. See [governance](docs/GOVERNANCE.md) and the [code of conduct](CODE_OF_CONDUCT.md). The proprietary Enterprise edition is maintained separately.
 
 ## Developer API (experimental)
 
