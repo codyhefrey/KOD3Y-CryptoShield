@@ -4,12 +4,15 @@ import json
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlsplit
 from cryptoshield import collect
+from developer_keys import verify
 
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         path = urlsplit(self.path).path
         if path == "/v1/health":
             self.respond(200, {"status": "ok", "service": "cryptoshield", "version": "v1"})
+        elif path in ("/v1/scan", "/v1/alerts") and not self.authorized():
+            self.respond(401, {"error": "invalid_or_missing_api_key"})
         elif path == "/v1/scan":
             self.respond(200, collect())
         elif path == "/v1/alerts":
@@ -18,6 +21,9 @@ class Handler(BaseHTTPRequestHandler):
             self.respond(200, {"alerts": assess(snapshot, 80), "note": "Investigation leads, not malware verdicts"})
         else:
             self.respond(404, {"error": "not_found"})
+    def authorized(self):
+        value = self.headers.get('Authorization', '')
+        return value.startswith('Bearer ') and verify(value[7:])
     def do_POST(self):
         self.respond(405, {"error": "read_only_api"})
     def respond(self, status, payload):
