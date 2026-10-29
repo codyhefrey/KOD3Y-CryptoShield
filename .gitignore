@@ -10,3 +10,5 @@ cryptoshield-report*.json
 reports/
 secrets/
 .pytest_cache/
+
+cryptoshield-monitor*.jsonl
