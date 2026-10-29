@@ -26,3 +26,9 @@ See [roadmap](docs/ROADMAP.md) and [security policy](SECURITY.md).
 
 ## Licensing
 A public license has not yet been selected; public visibility alone does not grant redistribution rights. Do not assume the code is open-source licensed until a license is added.
+
+## Developer API (experimental)
+
+Start `python api.py --port 8787` and query `http://127.0.0.1:8787/v1/health`.
+See [API reference](docs/API.md) and [Python client](sdk/python/cryptoshield_client.py).
+This API is local-only, read-only, unauthenticated, and not suitable for public exposure.
