@@ -26,3 +26,7 @@ print(client.alerts())
 - Process executable paths may be sensitive; avoid sharing raw scan responses.
 - High CPU alone is not a malware verdict.
 - API v1 is experimental; responses may change before a stable release.
+
+## Developer keys (required for scan and alerts)
+
+Run `python developer_keys.py` to create a unique local key, then pass `Authorization: Bearer YOUR_KEY` for `/v1/scan` and `/v1/alerts`. `/v1/health` requires no key. The Python client accepts `CryptoShieldClient(api_key="YOUR_KEY")`. See [credential guide](DEVELOPER_KEYS.md). This is not a hosted commercial authentication service.
