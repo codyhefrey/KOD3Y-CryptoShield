@@ -1,0 +1,6 @@
+# Default review ownership; GitHub must separately enable required CODEOWNER reviews.
+/ @codyhefrey
+/.github/ @codyhefrey
+/SECURITY.md @codyhefrey
+/api.py @codyhefrey
+/developer_keys.py @codyhefrey
