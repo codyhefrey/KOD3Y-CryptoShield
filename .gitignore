@@ -12,3 +12,5 @@ secrets/
 .pytest_cache/
 
 cryptoshield-monitor*.jsonl
+
+cryptoshield-keys.json
