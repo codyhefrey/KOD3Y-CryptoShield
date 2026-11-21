@@ -9,6 +9,48 @@ Defensive, read-only cryptojacking triage prototype by KOD3Y T3CH.
 - Run unit tests and GitHub Actions checks.
 
 **Limitations:** This is not an antivirus, continuous monitor, cryptominer signature scanner, or guarantee of protection. High CPU alone does not prove cryptojacking. No processes are stopped and no remote telemetry is sent.
+## Setup for New Contributors
+
+### Prerequisites
+
+Before setting up the project, make sure you have:
+
+- Python 3.10 or later
+- Git
+- A terminal or command prompt
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/codyhefrey/KOD3Y-CryptoShield.git
+cd KOD3Y-CryptoShield
+```
+
+### Create a Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+Activate the environment on Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Activate the environment on macOS or Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+### Install Dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+After completing these steps, follow the Quick start instructions below to run the application and tests.
 
 ## Quick start
 Requires Python 3.10+.
